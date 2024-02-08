@@ -191,7 +191,7 @@ def call_openai(sys_prompt: str, user_prompt, api_type: str):
 
 
     elif api_type == ApiType.open_ai.value:
-        openai.api_key = st.secrets("OPENAI_API_KEY")
+        openai.api_key = st.secrets["OPENAI_API_KEY"]
         for text in user_prompt:
             messages.append({
                 "role": "user", "content": text.text
